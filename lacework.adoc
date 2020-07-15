@@ -223,3 +223,25 @@ Your choice: 2
 2020-07-15 20:33:07,337 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
 2020-07-15 20:33:07,535 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 10.128.2.1:10250
 ----
+
+
+----
+What is a Lacework Polygraph?
+Source: https://support.lacework.com/hc/en-us/articles/360005871714-Lacework-Polygraph-FAQs
+
+In the world of criminal investigation, a Polygraph is used to detect if people are lying. 
+Polygraph tests use multiple sensors attached to a person and look for changes like a racing heartbeat or 
+elevated blood pressure to detect if that person is not being honest. 
+Lacework uses a similar approach for DC/cloud entities (users, workloads, and applications) and their behaviors 
+by looking for deviations from their normal behavior to detect breaches.
+
+There are currently six Lacework Polygraph analysis groups:
+Application/process communications
+Application launches
+Machine communications
+Machine servers
+Privilege changes
+Insider behaviors
+----
+
+image:images/polygraph.png[title="Lacework Polygraph on OpenShift 4.5+"]
