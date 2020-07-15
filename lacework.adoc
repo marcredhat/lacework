@@ -212,7 +212,7 @@ tcpdump-wcz5s          1/1     Running   0          34m
 
 
 ----
-[root@dell-r730-001 ~]# oc rsh kubehunter-j9rk6
+oc rsh kubehunter-j9rk6
 /kube-hunter # kube-hunter
 Choose one of the options below:
 1. Remote scanning      (scans one or more specific IPs or DNS names)
