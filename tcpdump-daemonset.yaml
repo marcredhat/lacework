@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: tcpdump
+  labels:
+       marc: tcpdump
+spec:
+  selector:
+     matchLabels:
+       marc: tcpdump
+  template:
+    metadata:
+      labels:
+        marc: tcpdump
+    spec:
+      nodeSelector:
+        marc: tcpdumpnode
+      containers:
+        - name: tcpdump
+          image: corfr/tcpdump
+          securityContext:
+             #runAsUser: 0
+             allowPrivilegeEscalation: true
+             privileged: true
+          command:
+          - bin/sleep
+          - infinity
+      serviceAccount: samarc
+      serviceAccountName: samarc
