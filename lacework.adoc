@@ -1,4 +1,6 @@
-
+----
+oc new-project lacework
+----
 
 ----
 oc create sa samarc
