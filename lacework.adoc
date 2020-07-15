@@ -145,7 +145,7 @@ image:images/monitoragents.png[title="Lacework agents on OpenShift 4.5+"]
 
 
 ----
-In order to test Lacework functionalities, we'll also create a DaemonSet with network tools as follows
+In order to test Lacework functionality, we'll also create a DaemonSet with network tools as follows
 ----
 
 ----
