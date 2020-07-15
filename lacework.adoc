@@ -84,8 +84,14 @@ worker-1.ocp45.local   Ready      worker          9d    v1.18.3+6025c28
 worker-2.ocp45.local   Ready      worker          9d    v1.18.3+6025c28
 ----
 
+
+----
+Tag the OpenShift nodes where you want to deploy Lacework agents with name=lacework_worker_nodes as shown below
+----
+
 ----
 oc label node worker-1.ocp45.local name=lacework_worker_nodes
+....
 ----
 
 ----
