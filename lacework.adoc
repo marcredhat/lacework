@@ -193,5 +193,19 @@ oc label node master-2.ocp45.local marc2=kubehunternode
 oc label node master-3.ocp45.local marc2=kubehunternode
 oc label node worker-1.ocp45.local marc2=kubehunternode
 oc label node worker-2.ocp45.local marc2=kubehunternode
+----
 
+
+----
+oc get pods
+NAME                   READY   STATUS    RESTARTS   AGE
+kubehunter-j9rk6       1/1     Running   0          4s
+kubehunter-ls4h7       1/1     Running   0          4s
+kubehunter-qjk4n       1/1     Running   0          4s
+kubehunter-xxwbs       1/1     Running   0          4s
+lacework-agent-wclsl   1/1     Running   0          79m
+tcpdump-nj7zh          1/1     Running   0          34m
+tcpdump-tk8g4          1/1     Running   0          34m
+tcpdump-vgjpl          1/1     Running   0          34m
+tcpdump-wcz5s          1/1     Running   0          34m
 ----
