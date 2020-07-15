@@ -37,7 +37,7 @@ See example at: https://raw.githubusercontent.com/marcredhat/lacework/master/lac
 
 
 ----
-wget is https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
+wget https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
 ----
 
 
