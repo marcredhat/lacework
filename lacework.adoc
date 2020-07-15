@@ -256,15 +256,15 @@ ssh into an OpenShift 4 node
 ssh -i /root/ocp4_setup_ocp45/sshkey core@worker-1.ocp45.local
 ----
 
-----
+
 
 ----
 In the Lacework console, go to Workloads / Networks and click on the "Insider behavior" polygraph
 ----
 
-----
+
 image:images/insiderbehaviorpolygraph.png[title="Insider Behavior Polygraph on OpenShift 4.5+"]
-----
+
 
 
 == Machine communication polygraph
