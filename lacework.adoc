@@ -1,3 +1,12 @@
+== Lacework on OpenShift 4.5 lab
+
+----
+oc version
+Client Version: 4.5.0-rc.6
+Server Version: 4.5.0-rc.6
+Kubernetes Version: v1.18.3+6025c28
+----
+
 ----
 oc new-project lacework
 ----
