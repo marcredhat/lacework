@@ -281,9 +281,9 @@ Name       MAC address          Protocol     Addres
 vnet8      52:54:00:83:2f:ea    ipv4         192.168.122.169/24
 ----
 
-----
+
 image:images/machinecommunicationpolygraph.png[title="Lacework machine communication polygraph on OpenShift 4.5+"]
-----
+
 
 
 
