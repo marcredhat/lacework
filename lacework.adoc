@@ -160,3 +160,14 @@ oc label node master-3.ocp45.local marc=tcpdumpnode
 oc label node worker-1.ocp45.local marc=tcpdumpnode
 oc label node worker-2.ocp45.local marc=tcpdumpnode
 ----
+
+
+----
+oc get pods
+NAME                   READY   STATUS    RESTARTS   AGE
+lacework-agent-wclsl   1/1     Running   0          44m
+tcpdump-nj7zh          1/1     Running   0          10s
+tcpdump-tk8g4          1/1     Running   0          10s
+tcpdump-vgjpl          1/1     Running   0          8s
+tcpdump-wcz5s          1/1     Running   0          10s
+----
