@@ -15,6 +15,17 @@ serviceAccountName: samarc
 to the DaemonSet definition in lacework-k8s.yaml
 ----
 
+
+----
+oc create -f lacework-cfg-k8s.yaml
+configmap/lacework-config created
+----
+
+----
+oc create -f lacework-k8s.yaml
+daemonset.apps/lacework-agent created
+----
+
 ----
 oc get nodes
 NAME                   STATUS     ROLES           AGE   VERSION
@@ -28,4 +39,16 @@ worker-2.ocp45.local   Ready      worker          9d    v1.18.3+6025c28
 ----
 oc label node worker-1.ocp45.local name=lacework
 oc label node worker-2.ocp45.local name=lacework
+----
+
+----
+[root@dell-r730-001 ~]# oc get all
+NAME                       READY   STATUS    RESTARTS   AGE
+pod/lacework-agent-5xr7q   1/1     Running   0          52s
+pod/lacework-agent-9v5zq   1/1     Running   0          52s
+pod/lacework-agent-p2wdf   1/1     Running   0          52s
+pod/lacework-agent-z7nwb   1/1     Running   0          52s
+
+NAME                            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+daemonset.apps/lacework-agent   4         4         4       4            4           <none>          52s
 ----
