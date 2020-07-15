@@ -52,3 +52,33 @@ pod/lacework-agent-z7nwb   1/1     Running   0          52s
 NAME                            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
 daemonset.apps/lacework-agent   4         4         4       4            4           <none>          52s
 ----
+
+
+----
+oc get ev
+LAST SEEN   TYPE     REASON             OBJECT                     MESSAGE
+<unknown>   Normal   Scheduled          pod/lacework-agent-5xr7q   Successfully assigned lacework/lacework-agent-5xr7q to master-2.ocp45.local
+4m48s       Normal   Pulling            pod/lacework-agent-5xr7q   Pulling image "lacework/datacollector"
+4m36s       Normal   Pulled             pod/lacework-agent-5xr7q   Successfully pulled image "lacework/datacollector"
+4m35s       Normal   Created            pod/lacework-agent-5xr7q   Created container lacework
+4m35s       Normal   Started            pod/lacework-agent-5xr7q   Started container lacework
+<unknown>   Normal   Scheduled          pod/lacework-agent-9v5zq   Successfully assigned lacework/lacework-agent-9v5zq to worker-2.ocp45.local
+4m50s       Normal   Pulling            pod/lacework-agent-9v5zq   Pulling image "lacework/datacollector"
+4m43s       Normal   Pulled             pod/lacework-agent-9v5zq   Successfully pulled image "lacework/datacollector"
+4m42s       Normal   Created            pod/lacework-agent-9v5zq   Created container lacework
+4m42s       Normal   Started            pod/lacework-agent-9v5zq   Started container lacework
+<unknown>   Normal   Scheduled          pod/lacework-agent-p2wdf   Successfully assigned lacework/lacework-agent-p2wdf to master-3.ocp45.local
+4m49s       Normal   Pulling            pod/lacework-agent-p2wdf   Pulling image "lacework/datacollector"
+4m41s       Normal   Pulled             pod/lacework-agent-p2wdf   Successfully pulled image "lacework/datacollector"
+4m41s       Normal   Created            pod/lacework-agent-p2wdf   Created container lacework
+4m41s       Normal   Started            pod/lacework-agent-p2wdf   Started container lacework
+<unknown>   Normal   Scheduled          pod/lacework-agent-z7nwb   Successfully assigned lacework/lacework-agent-z7nwb to worker-1.ocp45.local
+4m49s       Normal   Pulling            pod/lacework-agent-z7nwb   Pulling image "lacework/datacollector"
+4m42s       Normal   Pulled             pod/lacework-agent-z7nwb   Successfully pulled image "lacework/datacollector"
+4m42s       Normal   Created            pod/lacework-agent-z7nwb   Created container lacework
+4m42s       Normal   Started            pod/lacework-agent-z7nwb   Started container lacework
+4m50s       Normal   SuccessfulCreate   daemonset/lacework-agent   Created pod: lacework-agent-p2wdf
+4m50s       Normal   SuccessfulCreate   daemonset/lacework-agent   Created pod: lacework-agent-9v5zq
+4m50s       Normal   SuccessfulCreate   daemonset/lacework-agent   Created pod: lacework-agent-z7nwb
+4m50s       Normal   SuccessfulCreate   daemonset/lacework-agent   Created pod: lacework-agent-5xr7q
+----
