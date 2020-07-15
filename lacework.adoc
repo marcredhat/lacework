@@ -1,6 +1,8 @@
 == Lacework on OpenShift 4.5 lab
 
 
+image:images/openshift45lacework.png[title="Lacework agents on OpenShift 4.5+"]
+
 ----
 For details on how to fully automate the installation of OpenShift 4.5 (for lab/test purposes)
 on a baremetal server with KVM/libvirt, 
