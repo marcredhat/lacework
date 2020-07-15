@@ -1,19 +1,20 @@
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: kubehunter
   labels:
-       marc: kubehunter
+       marc2: kubehunter
 spec:
   selector:
      matchLabels:
-       marc: kubehunter
+       marc2: kubehunter
   template:
     metadata:
       labels:
-        marc: kubehunter
+        marc2: kubehunter
     spec:
       nodeSelector:
-        marc: kubehunternode
+        marc2: kubehunternode
       containers:
         - name: kubehunter
           image: aquasec/kube-hunter
