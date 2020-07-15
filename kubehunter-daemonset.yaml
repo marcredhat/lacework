@@ -22,7 +22,7 @@ spec:
              allowPrivilegeEscalation: true
              privileged: true
           command:
-          - bin/sleep
+          - sleep
           - infinity
       serviceAccount: samarc
       serviceAccountName: samarc
