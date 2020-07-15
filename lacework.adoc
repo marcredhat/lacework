@@ -51,7 +51,13 @@ See example at: https://raw.githubusercontent.com/marcredhat/lacework/master/lac
 wget https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
 ----
 
+----
+Copy the Kubernetes config file from the Lacework console (Setting / Agents / Install Options / Kubernetes Config)
+----
 
+----
+oc create -f lacework-cfg-k8s.yaml
+----
 
 ----
 oc create -f lacework-cfg-k8s.yaml
