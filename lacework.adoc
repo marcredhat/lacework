@@ -171,3 +171,9 @@ tcpdump-tk8g4          1/1     Running   0          10s
 tcpdump-vgjpl          1/1     Running   0          8s
 tcpdump-wcz5s          1/1     Running   0          10s
 ----
+
+
+----
+[root@dell-r730-001 ~]# oc rsh tcpdump-wcz5s
+/ # tcpdump -i any
+----
