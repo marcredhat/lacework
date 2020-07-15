@@ -26,12 +26,15 @@ to the DaemonSet definition in lacework-k8s.yaml
 See example at: https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
 ----
 
+NOTE: I also added a nodeSelector so that you can select on which OpenShift nodes your want to deploy Lacework
+
 ----
-Note that I also added a nodeSelectors so that you can select on which OpenShift nodes your want to deploy Lacework
 spec:
       nodeSelector:
         name: lacework_worker_nodes
-        
+----
+
+----
 See example at: https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
 ----
 
