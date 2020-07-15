@@ -209,3 +209,17 @@ tcpdump-tk8g4          1/1     Running   0          34m
 tcpdump-vgjpl          1/1     Running   0          34m
 tcpdump-wcz5s          1/1     Running   0          34m
 ----
+
+
+----
+[root@dell-r730-001 ~]# oc rsh kubehunter-j9rk6
+/kube-hunter # kube-hunter
+Choose one of the options below:
+1. Remote scanning      (scans one or more specific IPs or DNS names)
+2. Interface scanning   (scans subnets on all local network interfaces)
+3. IP range scanning    (scans a given IP range)
+Your choice: 2
+2020-07-15 20:33:07,337 INFO kube_hunter.modules.report.collector Started hunting
+2020-07-15 20:33:07,337 INFO kube_hunter.modules.report.collector Discovering Open Kubernetes Services
+2020-07-15 20:33:07,535 INFO kube_hunter.modules.report.collector Found open service "Kubelet API" at 10.128.2.1:10250
+----
