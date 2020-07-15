@@ -22,6 +22,8 @@ Add
 serviceAccount: samarc
 serviceAccountName: samarc
 to the DaemonSet definition in lacework-k8s.yaml
+
+Mine is https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
 ----
 
 
