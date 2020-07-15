@@ -1,0 +1,27 @@
+kind: DaemonSet
+metadata:
+  name: kubehunter
+  labels:
+       marc: kubehunter
+spec:
+  selector:
+     matchLabels:
+       marc: kubehunter
+  template:
+    metadata:
+      labels:
+        marc: kubehunter
+    spec:
+      nodeSelector:
+        marc: kubehunternode
+      containers:
+        - name: kubehunter
+          image: aquasec/kube-hunter
+          securityContext:
+             allowPrivilegeEscalation: true
+             privileged: true
+          command:
+          - bin/sleep
+          - infinity
+      serviceAccount: samarc
+      serviceAccountName: samarc
