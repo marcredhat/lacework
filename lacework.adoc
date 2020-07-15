@@ -7,3 +7,25 @@ oc create sa samarc
 oc adm policy add-scc-to-user privileged -z samarc
 oc adm policy add-scc-to-user anyuid -z default -n `oc project -q` --as=system:admin
 ----
+
+----
+Add
+serviceAccount: samarc
+serviceAccountName: samarc
+to the DaemonSet definition in lacework-k8s.yaml
+----
+
+----
+oc get nodes
+NAME                   STATUS     ROLES           AGE   VERSION
+master-1.ocp45.local   NotReady   master,worker   9d    v1.18.3+6025c28
+master-2.ocp45.local   Ready      master,worker   9d    v1.18.3+6025c28
+master-3.ocp45.local   Ready      master,worker   9d    v1.18.3+6025c28
+worker-1.ocp45.local   Ready      worker          9d    v1.18.3+6025c28
+worker-2.ocp45.local   Ready      worker          9d    v1.18.3+6025c28
+----
+
+----
+oc label node worker-1.ocp45.local name=lacework
+oc label node worker-2.ocp45.local name=lacework
+----
