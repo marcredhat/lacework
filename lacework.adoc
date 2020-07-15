@@ -23,8 +23,23 @@ serviceAccount: samarc
 serviceAccountName: samarc
 to the DaemonSet definition in lacework-k8s.yaml
 
-Mine is https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
+See example at: https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
 ----
+
+----
+Note that I also added a nodeSelectors so that you can select on which OpenShift nodes your want to deploy Lacework
+spec:
+      nodeSelector:
+        name: lacework_worker_nodes
+        
+See example at: https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
+----
+
+
+----
+wget is https://raw.githubusercontent.com/marcredhat/lacework/master/lacework-k8s.yaml
+----
+
 
 
 ----
@@ -38,6 +53,11 @@ daemonset.apps/lacework-agent created
 ----
 
 ----
+NOTE: no lacework-agent pods will be deployed as we have not yet tagged any OpenShift nodes with name=lacework_worker_nodes
+We will do that in a further step (see below).
+----
+
+----
 oc get nodes
 NAME                   STATUS     ROLES           AGE   VERSION
 master-1.ocp45.local   NotReady   master,worker   9d    v1.18.3+6025c28
@@ -48,8 +68,7 @@ worker-2.ocp45.local   Ready      worker          9d    v1.18.3+6025c28
 ----
 
 ----
-oc label node worker-1.ocp45.local name=lacework
-oc label node worker-2.ocp45.local name=lacework
+oc label node worker-1.ocp45.local name=lacework_worker_nodes
 ----
 
 ----
