@@ -135,3 +135,11 @@ LAST SEEN   TYPE     REASON             OBJECT                     MESSAGE
 4m50s       Normal   SuccessfulCreate   daemonset/lacework-agent   Created pod: lacework-agent-z7nwb
 4m50s       Normal   SuccessfulCreate   daemonset/lacework-agent   Created pod: lacework-agent-5xr7q
 ----
+
+
+----
+In the Lacework console, go to Monitor / Agents
+----
+
+image:images/monitoragents.png[title="Lacework agents on OpenShift 4.5+"]
+
