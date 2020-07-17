@@ -8,7 +8,12 @@ oc delete -f  sysdigagent.yml
 
 oc create -f  sysdigagent.yml
 
+
+sleep 6
+
 oc get pods
+
+
 
 
 printf  "***1) In Sysdig, go to Secure/ Activity Audit / select Lacework containers \n\n"
