@@ -8,6 +8,8 @@ oc delete -f  sysdigpipelineblock.yaml
 
 oc create -f  sysdigpipelineblock.yaml
 
+sleep 6
+
 oc get pods
 
 printf "\n\n*** For details, see blog article at https://sysdig.com/blog/securing-tekton-pipelines-openshift/ \n\n"
