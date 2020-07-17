@@ -4,9 +4,9 @@ oc version
 
 oc project lacework2
 
-oc delete -f  sysdigagent.yaml
+oc delete -f  sysdigagent.yml
 
-oc create -f  sysdigagent.yaml
+oc create -f  sysdigagent.yml
 
 oc get pods
 
